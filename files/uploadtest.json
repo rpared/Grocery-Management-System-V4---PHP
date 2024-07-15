@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "Id": "3A",
+            "Name": "Bagels",
+            "Category": "Bakery",
+            "Brand": "Yummy Stuff",
+            "Unit Price": 12.99,
+            "Expiry Date": "2024-06-25",
+            "Stock": 15
+        },
+        {
+            "Id": "1B",
+            "Name": "Apples",
+            "Category": "Fruit",
+            "Brand": "Canada Red",
+            "Unit Price": 5.99,
+            "Expiry Date": "2024-06-24",
+            "Stock": 10
+        }
+    ]
+}

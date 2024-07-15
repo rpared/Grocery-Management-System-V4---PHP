@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "Id": "4C",  
+            "Name": "Soy Milk",
+            "Category": "Plant Based Milk",
+            "Brand": "Happy Cow",
+            "Unit Price": 3.99,
+            "Expiry Date": "2024-07-10",
+            "Stock": 20
+          },
+          {
+            "Id": "2D",  
+            "Name": "Vegan Chicken",
+            "Category": "Plan Based Meat",
+            "Brand": "Ethical & Yummy",
+            "Unit Price": 8.99,
+            "Expiry Date": "2024-07-02",
+            "Stock": 8
+          }
+    ]
+}

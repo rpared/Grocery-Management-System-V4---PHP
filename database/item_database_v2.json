@@ -1,0 +1,67 @@
+{
+    "items": [
+        {
+            "Id": "1A",
+            "Name": "Cookies",
+            "Category": "Bakery",
+            "Brand": "Made Good",
+            "Unit Price": 12.99,
+            "Expiry Date": "2024-06-26",
+            "Stock": 28
+        },
+        {
+            "Id": "1C",
+            "Name": "Lettuce",
+            "Category": "Vegetable",
+            "Brand": "Organic Greens",
+            "Unit Price": 7.5,
+            "Expiry Date": "2024-06-19",
+            "Stock": 5
+        },
+        {
+            "Id": "3D",
+            "Name": "Tangerines",
+            "Category": "Fruit",
+            "Brand": "Yummy Fruits",
+            "Unit Price": 7.99,
+            "Expiry Date": "2024-07-02",
+            "Stock": 10
+        },
+        {
+            "Id": "5F",
+            "Name": "Coconut",
+            "Category": "Fruit",
+            "Brand": "Equifruit",
+            "Unit Price": 12.99,
+            "Expiry Date": "2024-07-09",
+            "Stock": 7
+        },
+        {
+            "Id": "7N",
+            "Name": "Pears",
+            "Category": "Fruit",
+            "Brand": "Yummy Fruits",
+            "Unit Price": 5.99,
+            "Expiry Date": "2024-07-06",
+            "Stock": 9
+        },
+        {
+            "Id": "3A",
+            "Name": "Bagels",
+            "Category": "Bakery",
+            "Brand": "Yummy Stuff",
+            "Unit Price": 12.99,
+            "Expiry Date": "2024-06-25",
+            "Stock": 15
+        },
+        {
+            "Id": "1B",
+            "Name": "Apples",
+            "Category": "Fruit",
+            "Brand": "Canada Red",
+            "Unit Price": 5.99,
+            "Expiry Date": "2024-06-24",
+            "Stock": 10
+        }
+    ]
+}
