@@ -20,6 +20,29 @@ class Repository {
         $statement->closeCursor();
         return $results;
     }
+    // Fetch all oreders
+    public function fetchOrders() {
+        $query = 'SELECT * FROM orders';
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $statement->closeCursor();
+        return $results;
+    }
+
+    // Fetch all oreders with items
+    public function fetchOrdersWithItems() {
+        $query = 'SELECT o.order_id, o.customer_name, o.order_date, o.sub_total, 
+        o.net_total, oi.item_id, oi.item_name, oi.item_quantity
+        FROM orders o  JOIN order_items oi ON o.order_id = oi.order_id';
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $statement->closeCursor();
+        return $results;
+    }
+
+
 
     // Fetch all item names (just the column!!)
     public function getItemNames() {
@@ -31,15 +54,29 @@ class Repository {
         return $results;
     }
 
-    // Fetch all orders
-    public function fetchOrders() {
-        $query = 'SELECT * FROM orders';
+    // Fetch the item stock
+    public function getItemStock($selected_item) {
+        $query = 'SELECT item_stock FROM items WHERE item_name = ?';
         $statement = $this->db->prepare($query);
+        $statement->bindValue(1, $selected_item);        
         $statement->execute();
-        $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $results = $statement->fetch(PDO::FETCH_COLUMN);
         $statement->closeCursor();
         return $results;
-    }
+    }    
+
+ // Change the item stock
+    public function changeItemStock($new_stock, $selected_item) {
+        $query = 'UPDATE items SET item_stock = ? WHERE item_name = ?';
+        $statement = $this->db->prepare($query);
+        $statement->bindValue(1, $new_stock);   
+        $statement->bindValue(2, $selected_item);    
+        $statement->execute();
+        $statement->closeCursor();
+        return true;
+    }    
+
+
 
  // Fetch order items by order ID
  public function fetchOrderItems($orderId) {

@@ -19,18 +19,23 @@ $orders = new Order($create_date, "SalesReport", "Admin");
 <br>
 <table>
   <thead>
-    <tr>
+    <!-- <tr>
       <th>Order ID</th>
       <th>Customer Name</th>
       <th>Item Name</th>
       <th>Quantity</th>
-    </tr>
+    </tr> -->
   </thead>
   <tbody>
     <?php
     
-    $orders->displayOrders($ordersArray);
+    // $orders->displayOrders($ordersArray);
+    // $orders->getOrdersOOP();
+    $orders->getOrdersWithItemsOOP();
+
     
+
+
     ?>
   </tbody>
 </table>
