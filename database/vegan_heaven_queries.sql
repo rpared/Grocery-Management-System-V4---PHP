@@ -1,3 +1,5 @@
+CREATE SCHEMA `db_vegan_heaven` ;
+
 show databases;
 DROP TABLE db_vegan_heaven.order_items;
 DROP TABLE db_vegan_heaven.items;
@@ -41,5 +43,32 @@ VALUES
     ('001', 'Chocolate Cookies', 'Snacks', 'Made Good', 8.99, '2024-12-31', 100),
     ('002', 'Almond Milk', 'Plant-based Milk', 'Happy Cow', 3.49, '2024-07-15', 20);
     
-    SELECT item_id AS Id, item_name AS Name, item_category AS Category, item_brand AS Brand, item_price AS Unit_price,
-    DATE_FORMAT(item_expiry_date, "%Y-%m-%d") AS "Expiry_date", item_stock AS Stock FROM items
+SELECT item_id AS Id, item_name AS Name, item_category AS Category, item_brand AS Brand, item_price AS Unit_price,
+    DATE_FORMAT(item_expiry_date, "%Y-%m-%d") AS "Expiry_date", item_stock AS Stock FROM items;
+
+SELECT * FROM items;
+
+-- Inserting sample orders into the orders table
+INSERT INTO `db_vegan_heaven`.`orders` (`customer_name`, `order_date`, `sub_total`, `net_total`)
+VALUES
+('Alice Johnson', '2024-07-20', 25.50, 25.50),
+('Bob Smith', '2024-07-20', 45.75, 45.75);
+
+SELECT * FROM orders;
+
+-- Inserting sample order items into the order_items table
+-- For order_id = 1 (Alice Johnson's order)
+INSERT INTO `db_vegan_heaven`.`order_items` (`order_id`, `item_id`, `item_name`, `item_quantity`)
+VALUES
+(1, '001', 'Chocolate Cookies', 2),
+(1, '002', 'Almond Milk', 1);
+
+-- For order_id = 2 (Bob Smith's order)
+INSERT INTO `db_vegan_heaven`.`order_items` (`order_id`, `item_id`, `item_name`, `item_quantity`)
+VALUES
+(2, '001', 'Chocolate Cookies', 1),
+(2, '002', 'Almond Milk', 3);
+
+SELECT * FROM order_items;
+
+

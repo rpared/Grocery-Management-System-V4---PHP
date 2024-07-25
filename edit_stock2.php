@@ -16,7 +16,7 @@ $inventory = new Inventory();
 <h2>Edit Stock of <?php echo $selected_item ?></h2>
 
 <p>The current stock is: <b> <?php
-echo $inventory->getStockOOP($selected_item, $inventory);
+echo $inventory->getStockOOP($selected_item);
 ?></b>
 </p>
 <form action="edit_stock3.php" method="POST">

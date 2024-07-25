@@ -36,6 +36,16 @@ class Inventory {
       }
     }
 
+    // Fetch the stock of a selected item
+    public function getStockOOP($selected_item) {
+      return $this->repository->getItemStock($selected_item);
+  }
+
+    // Change the stock of a selected item
+    public function changeStockOOP($new_stock, $selected_item) {
+      return $this->repository->changeItemStock($new_stock, $selected_item);
+  }
+
 
     // Function to populate Datalist with options
     public function itemDatalist() {
